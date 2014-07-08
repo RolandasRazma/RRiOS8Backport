@@ -15,6 +15,23 @@ Not all users will update to iOS8 and developer life is hard enaugh :)
 Add project as library, setup `Build Phases`, add `-ObjC` to `Other Linker Flags`
 
 
+### Current backports table
+<table>
+  <!-- CLLocationManager -->
+  <tr>
+    <th colspan="2"><a href="">CLLocationManager</a></th>
+  </tr>
+  <tr>
+    <td><a href="">-[CLLocationManager requestWhenInUseAuthorization]</a></td>
+    <td style="background-color: green;">Done.</td>
+  </tr>
+  <tr>
+    <td><a href="">-[CLLocationManager requestAlwaysAuthorization]</a></td>
+    <td style="background-color: green;">Done.</td>
+  </tr>
+
+</table>
+
 ### iOS7 to iOS6 Backport
 If you supporting `iOS6` check out [RRiOS7Backport](https://github.com/RolandasRazma/RRiOS7Backport)
 
