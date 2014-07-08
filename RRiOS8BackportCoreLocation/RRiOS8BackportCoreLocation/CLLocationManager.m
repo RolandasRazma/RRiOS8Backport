@@ -29,7 +29,6 @@
 
 #import "CLLocationManager.h"
 
-
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wincomplete-implementation"
 @implementation CLLocationManager (RRiOS8Backport)
@@ -57,12 +56,16 @@
 
 
 - (void)rr_requestWhenInUseAuthorization {
-    
+#if RR_IOS8_BACKPORT_DEBUG
+    NSLog(@"iOS8 BACKPORT: -[CLLocationManager requestWhenInUseAuthorization]");
+#endif
 }
 
 
 - (void)rr_requestAlwaysAuthorization {
-    
+#if RR_IOS8_BACKPORT_DEBUG
+    NSLog(@"iOS8 BACKPORT: -[CLLocationManager requestAlwaysAuthorization]");
+#endif
 }
 
 
