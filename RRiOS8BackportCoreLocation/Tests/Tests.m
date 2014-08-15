@@ -1,6 +1,6 @@
 //
 //  Tests.m
-//  RRiOS7Backport
+//  RRiOS8BackportCoreLocation
 //
 //  Created by Rolandas Razma on 03/06/2014.
 //  Copyright (c) 2013 Rolandas Razma.

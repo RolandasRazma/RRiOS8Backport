@@ -1,6 +1,6 @@
 //
 //  CLLocationManager.h
-//  RRiOS8Backport
+//  RRiOS8BackportCoreLocation
 //
 //  Created by Rolandas Razma on 03/06/2014.
 //  Copyright (c) 2014 Rolandas Razma.
