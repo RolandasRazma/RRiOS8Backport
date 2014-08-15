@@ -34,7 +34,10 @@ Add project as library, setup `Build Phases`, add `-ObjC` to `Other Linker Flags
     <th colspan="2"><a href="">LAContext</a></th>
   </tr>
   <tr>
-    <th colspan="2">you will have to use `LAContext *context = [[NSClassFromString(@"LAContext") alloc] init];` instead of `LAContext *context = [[LAContext alloc] init];`</th>
+    <td colspan="2">you will have to use:<br />
+    LAContext *context = [[NSClassFromString(@"LAContext") alloc] init];<br />
+    instead of:<br />
+    LAContext *context = [[LAContext alloc] init];</td>
   </tr>
   <tr>
     <td><a href="">-[LAContext setLocalizedFallbackTitle:]</a></td>
