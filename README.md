@@ -29,7 +29,29 @@ Add project as library, setup `Build Phases`, add `-ObjC` to `Other Linker Flags
     <td><a href="">-[CLLocationManager requestAlwaysAuthorization]</a></td>
     <td style="background-color: green;">Done.</td>
   </tr>
-
+  <!-- LAContext -->
+  <tr>
+    <th colspan="2"><a href="">LAContext</a></th>
+  </tr>
+  <tr>
+    <th colspan="2">you will have to use `LAContext *context = [[NSClassFromString(@"LAContext") alloc] init];` instead of `LAContext *context = [[LAContext alloc] init];`</th>
+  </tr>
+  <tr>
+    <td><a href="">-[LAContext setLocalizedFallbackTitle:]</a></td>
+    <td style="background-color: green;">Done.</td>
+  </tr>
+  <tr>
+    <td><a href="">-[LAContext localizedFallbackTitle]</a></td>
+    <td style="background-color: green;">Done.</td>
+  </tr>
+  <tr>
+    <td><a href="">-[LAContext canEvaluatePolicy:error:]</a></td>
+    <td style="background-color: green;">Done.</td>
+  </tr>
+  <tr>
+    <td><a href="">-[LAContext evaluatePolicy:localizedReason:reply:]</a></td>
+    <td style="background-color: green;">Done.</td>
+  </tr>
 </table>
 
 ### iOS7 to iOS6 Backport

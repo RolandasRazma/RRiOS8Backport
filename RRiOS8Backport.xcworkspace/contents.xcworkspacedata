@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:README.md">
+   </FileRef>
+   <FileRef
       location = "group:RRiOS8BackportCoreLocation/RRiOS8BackportCoreLocation.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:RRiOS8BackportLocalAuthentication/RRiOS8BackportLocalAuthentication.xcodeproj">
    </FileRef>
 </Workspace>
