@@ -67,7 +67,7 @@
 @implementation Tests (CLLocationManager)
 
 
-- (void)testTolerance {
+- (void)testMethods {
     
     // Test if method exists
     XCTAssertTrue([CLLocationManager instancesRespondToSelector:@selector(requestWhenInUseAuthorization)],       @"missing -[CLLocationManager requestWhenInUseAuthorization]");
