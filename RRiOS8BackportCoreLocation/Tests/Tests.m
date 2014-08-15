@@ -29,6 +29,7 @@
 
 
 #import <XCTest/XCTest.h>
+#import <UIKit/UIKit.h>
 #import <CoreLocation/CLLocationManager.h>
 
 
