@@ -31,11 +31,19 @@
 
 
 - (BOOL)canEvaluatePolicy:(RRPolicy)policy error:(NSError * __autoreleasing *)error {
+#if RR_IOS8_BACKPORT_DEBUG
+    NSLog(@"iOS8 BACKPORT: -[LAContext canEvaluatePolicy:error:]");
+#endif
+    
     return NO;
 }
 
 
 - (void)evaluatePolicy:(RRPolicy)policy localizedReason:(NSString *)localizedReason reply:(void(^)(BOOL success, NSError *error))reply {
+#if RR_IOS8_BACKPORT_DEBUG
+    NSLog(@"iOS8 BACKPORT: -[LAContext evaluatePolicy:localizedReason:reply:]");
+#endif
+    
     reply(NO, [NSError errorWithDomain:@kLAErrorDomain code:kLAErrorAuthenticationFailed userInfo:nil]);
 }
 
