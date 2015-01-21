@@ -28,6 +28,14 @@
 //
 
 #import "CLLocationManager.h"
+#import "objc/runtime.h"
+
+
+#define RR_ADD_INSTANCE_METHOD(__CLASS__, __ORIG_SELECTOR__, __NEW_SELECTOR__) {                                                            \
+    Method newInstanceMethod = class_getInstanceMethod(__CLASS__, __NEW_SELECTOR__);                                                        \
+    class_addMethod(__CLASS__, __ORIG_SELECTOR__, method_getImplementation(newInstanceMethod), method_getTypeEncoding(newInstanceMethod));  \
+}
+
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wincomplete-implementation"
