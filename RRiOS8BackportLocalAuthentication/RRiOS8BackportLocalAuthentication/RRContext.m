@@ -7,6 +7,7 @@
 //
 
 #import "RRContext.h"
+#import "objc/runtime.h"
 
 
 @implementation RRContext {
