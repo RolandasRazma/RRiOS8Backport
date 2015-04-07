@@ -31,19 +31,14 @@
 #import "objc/runtime.h"
 
 
-#define RR_ADD_INSTANCE_METHOD(__CLASS__, __ORIG_SELECTOR__, __NEW_SELECTOR__) {                                                            \
-    Method newInstanceMethod = class_getInstanceMethod(__CLASS__, __NEW_SELECTOR__);                                                        \
-    class_addMethod(__CLASS__, __ORIG_SELECTOR__, method_getImplementation(newInstanceMethod), method_getTypeEncoding(newInstanceMethod));  \
-}
-
-
 @implementation UILabel (RRiOS8Backport)
 
 
 + (void)load {
     
     if( ([[[UIDevice currentDevice] systemVersion] compare:@"8.0" options:NSNumericSearch] == NSOrderedAscending) ){
-        RR_ADD_INSTANCE_METHOD([self class], @selector(setFrame:), @selector(rr_r_setFrame:))
+        Class class = [self class];
+        method_exchangeImplementations(class_getInstanceMethod(class, @selector(setFrame:)), class_getInstanceMethod(class, @selector(rr_r_setFrame:)));
     }
     
 }
