@@ -10,4 +10,7 @@
    <FileRef
       location = "group:RRiOS8BackportLocalAuthentication/RRiOS8BackportLocalAuthentication.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:RRiOS8BackportLocalAuthentication/../RRiOS8BackportUIKit/RRiOS8BackportUIKit.xcodeproj">
+   </FileRef>
 </Workspace>
