@@ -47,7 +47,7 @@
 - (void)rr_r_setFrame:(CGRect)frame {
     
     CGFloat frameWidth = floorf(CGRectGetWidth(frame));
-    if( !self.preferredMaxLayoutWidth || (self.preferredMaxLayoutWidth != frameWidth && [self automaticPreferredMaxLayoutWidth]) ){
+    if( !self.preferredMaxLayoutWidth || (!self.numberOfLines && self.preferredMaxLayoutWidth != frameWidth && [self automaticPreferredMaxLayoutWidth]) ){
         [self setPreferredMaxLayoutWidth: frameWidth];
         objc_setAssociatedObject(self, @selector(automaticPreferredMaxLayoutWidth), @YES, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
